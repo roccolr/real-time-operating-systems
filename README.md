@@ -41,7 +41,15 @@ Then run
 make menuconfig
 ```
 
+Since we are using kernel version 6.*, we can use built in real time support.
 Using the GUI, General Setup/Preemption model/fully preemptible. 
+
+Otherwise, we could have done:
+
+``` bash 
+patch -p1 --dry-run < ../nome_patch.patch
+patch -p1 < ../nome_patch.patch
+```
 
 ## Configuration 
 The aim is to remove _latency killers_ and every bit of useless code. 
@@ -69,3 +77,12 @@ If there are too many modules
 cd /lib/modules/6.12.79-rt17
 sudo find .7 -iname "*.ko" -exec strip --strip-unneeded {} \;
 ```
+
+## GRUB setup 
+``` bash 
+sudo update-grub
+sudo nano /etc/default/grub
+```
+
+comment out # GRUB_TIMEOUT. 
+REBOOT and choose your new kernel!
