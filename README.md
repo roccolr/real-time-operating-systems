@@ -75,7 +75,7 @@ If there are too many modules
 
 ``` bash 
 cd /lib/modules/6.12.79-rt17
-sudo find .7 -iname "*.ko" -exec strip --strip-unneeded {} \;
+sudo find ./ -iname "*.ko" -exec strip --strip-unneeded {} \;
 ```
 
 ## GRUB setup 
@@ -86,3 +86,21 @@ sudo nano /etc/default/grub
 
 comment out # GRUB_TIMEOUT. 
 REBOOT and choose your new kernel!
+
+# Tools for Real time Linux
+## Measurement 
+1. [cyclictest](https://wiki.linuxfoundation.org/realtime/documentation/howto/tools/cyclictest/start) accurately and repeatedly measures the difference between a thread's intended wake-up time and the time at which it actually wakes up from clock_nanosleep in order to provide statistics about the system's latencies. It can measure latencies in real-time systems caused by the hardware, the firmware, and the operating system. 
+
+2. [RT-Tests](https://wiki.linuxfoundation.org/realtime/documentation/howto/tools/rt-tests) is a test suite, that contains programs to test various real time Linux features.
+
+3. [RTLA](https://docs.kernel.org/tools/rtla/index.html) provides a set of tools for the analysis of the kernel’s realtime behavior on specific hardware.
+
+4. [LTP](https://wiki.linuxfoundation.org/realtime/documentation/howto/tools/ltp)'s goal is to deliver tests to the open source community that validate the reliability, robustness, and stability of Linux. 
+
+5. [RT-APP](https://github.com/scheduler-tools/rt-app) is a test application that starts multiple periodic threads in order to simulate a real-time periodic load.
+
+## Load 
+1. iperf (network)
+2. fio (disk)
+3. hackbench (scheduler)
+4. stress-ng
