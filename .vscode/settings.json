@@ -1,6 +1,0 @@
-{
-    "clangd.fallbackFlags": [
-        "-I${workspaceFolder}/include",
-        "-I/my/include"
-        ]
-}
