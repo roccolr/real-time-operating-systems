@@ -1,11 +1,14 @@
-CC = gcc
-CFLAGS = -Wall 
+CC = gcc 
+CFLAGS = -Wall
+TARGET = main
+OBJ = main.o 
 
-hello:
-	echo "[MAKE] beginning compilation..."
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJ)
 
-get_time: get_time.c 
-	$(CC) $(CFLAGS) $^ -o $@
+main.o: main.c 
+	$(CC) $(CFLAGS) -c main.c -o $@
 
 clean:
-	rm get_time
+	rm -rf *.o 
+	echo "rimozione completa";
