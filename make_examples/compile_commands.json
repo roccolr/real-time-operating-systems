@@ -1,0 +1,44 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-I./include",
+      "-c",
+      "-o",
+      "lib1.o",
+      "src/lib1.c"
+    ],
+    "directory": "/home/jsorel/Desktop/real-time-operating-systems/make_examples",
+    "file": "/home/jsorel/Desktop/real-time-operating-systems/make_examples/src/lib1.c",
+    "output": "/home/jsorel/Desktop/real-time-operating-systems/make_examples/lib1.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-I./include",
+      "-c",
+      "-o",
+      "lib2.o",
+      "src/lib2.c"
+    ],
+    "directory": "/home/jsorel/Desktop/real-time-operating-systems/make_examples",
+    "file": "/home/jsorel/Desktop/real-time-operating-systems/make_examples/src/lib2.c",
+    "output": "/home/jsorel/Desktop/real-time-operating-systems/make_examples/lib2.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-Wall",
+      "-I./include",
+      "-c",
+      "-o",
+      "main.o",
+      "src/main.c"
+    ],
+    "directory": "/home/jsorel/Desktop/real-time-operating-systems/make_examples",
+    "file": "/home/jsorel/Desktop/real-time-operating-systems/make_examples/src/main.c",
+    "output": "/home/jsorel/Desktop/real-time-operating-systems/make_examples/main.o"
+  }
+]
