@@ -55,7 +55,7 @@ patch -p1 < ../nome_patch.patch
 The aim is to remove _latency killers_ and every bit of useless code. 
 In order to reduce bloat from a general purpose distro, run localmodconfig to put in .config only the modules found with lsmod. 
 
-![alt text](/pics/Screenshot%20from%202026-06-01%2018-08-47.png "Configuration")
+
 ![alt text](/pics/Screenshot%20from%202026-06-01%2018-55-11.png "Configuration")
 
 ## Build the kernel 
